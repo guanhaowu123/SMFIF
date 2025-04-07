@@ -22,7 +22,7 @@ model.fit(train_df)
 y_pred = model.predict(test_df)
 y_proba = model.predict_proba(test_df)[:, 1]
 metrics = evaluate_model(test_df['lable'], y_pred, y_proba)
-print("测试集指标：", metrics)
+print("test：", metrics)
 
 # save model
 model.save("smfif_model.pkl")
